@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p>This is the first paragraph.</p>
+
+
+    <!-- <div id="testDiv">kjhkj</div> -->
+    <script>
+      // let div = document.getElementById('testDiv');
+      // div.innerHTML = '<p>This is the first paragraph inside div<p>'
+        let ele = 'p'
+      let newParagraph = document.createElement(ele);
+      newParagraph.innerText = "This is a new paragraph.";
+
+      document.body.append(newParagraph);
+
+      let firstParagraph = document.querySelector("p");
+
+      let newHeading = document.createElement("h2");
+      newHeading.innerText = "This is a new heading.";
+      firstParagraph.before(newHeading);
+
+      let newDiv = document.createElement("div");
+      let newA = document.createElement("a");
+      newA.innerText = "This is a new a tag";
+      newDiv.append(newA);
+      firstParagraph.replaceWith(newDiv);
+
+      let newP = document.createElement("p");
+      newP.innerText = "This is a new paragraph after the new div.";
+      newDiv.after(newP);
+
+      // let lastParagraph = document.querySelector("p:last-child");
+      // lastParagraph.remove();
+    </script>
+  </body>
+</html>

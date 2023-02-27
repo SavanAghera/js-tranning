@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="alert('Button was clicked!')">Click me</button>
+    <button
+      onmousedown="console.log('Button press detected')"
+      onmouseup="console.log('Button release detected')">
+      Press and Release me
+    </button>
+    <div
+      id="box"
+      onmouseover="this.style.backgroundColor = 'red'"
+      onmouseout="this.style.backgroundColor = 'white'">
+      Hover over me
+    </div>
+
+
+    <input type="text" onblur="console.log('blur')" onfocus="console.log('focus')" placeholder="blur focus">
+    <input type="text" onchange="writeText(this)" placeholder="onchange">
+    <input type="text" oninput="writeText(this)" placeholder="oninput">
+    <p id="testText"></p>
+
+
+    <script>
+        function writeText(ele) {
+            document.getElementById('testText').innerHTML = ele.value;
+        }
+
+        document.getElementById('testText').addEventListener('click', () => {
+            console.log('element is clicked');
+        })
+    </script>
+  </body>
+</html>

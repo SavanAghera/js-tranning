@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.40/moment-timezone-with-data-10-year-range.js"></script>
+    <script>
+      let newDate = moment();
+      console.log(newDate.format());
+      
+      console.log(newDate.format("MMMM Do YYYY, h:mm:ss a"));
+      
+      let future = moment().add(1, 'week');
+      console.log(future.format()); 
+
+
+      let now = moment();
+      console.log("Current hour:", now.hour());
+      console.log("Current minute:", now.minute());
+      console.log("Current second:", now.second());
+      console.log("Current day:", now.date());  
+      console.log("Current month:", now.month()); 
+      console.log("Current year:", now.year());  
+      
+      console.log("Current timezone:", now.format("ZZ")); 
+      
+      // Get the difference between two dates
+      let past = moment("2022-10-01");
+      let diff = now.diff(past, 'days');
+      console.log("Difference in days:", diff); 
+
+
+
+      let timeInNewYork = moment().tz("America/New_York");
+      console.log("Time in new york:", timeInNewYork.format());
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

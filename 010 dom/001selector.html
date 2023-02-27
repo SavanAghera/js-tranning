@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p id="new">This is the first paragraph.</p>
+
+
+
+
+    <p class="highlight">This is a highlighted paragraph.</p>
+    <p class="highlight">This is another highlighted paragraph.</p>
+    <p id="myId" class="special">This is a special paragraph with unique ID</p>
+
+    <div id="divTest" class="special">
+      this is inside div
+      <p class="special">This is a special paragraph with unique ID</p>
+    </div>
+    <ul>
+      <li>List item 1</li>
+      <li>List item 2</li>
+    </ul>
+
+    <script>
+      let firstParagraph = document.getElementsByTagName("p")[0];
+      console.log(firstParagraph);
+      firstParagraph.style.color = "red";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      let myId = document.getElementById("myId");
+      // myId.style.backgroundColor = "green";
+
+      let highlighted = document.getElementsByClassName("highlight");
+      console.log(highlighted);
+      // for (let i = 0; i < highlighted.length; i++) {
+      //   //   highlighted[i].style.textDecoration = "underline";
+      // }
+
+      let specialParagraph = document.querySelector("p.special");
+      console.log(specialParagraph);
+      // // specialParagraph.style.fontWeight = "bold";
+
+
+
+      let specialParagraph2 = document.querySelectorAll("#divTest .special");
+      console.log(specialParagraph2);
+      // specialParagraph2.style.backgroundColor = "green";
+
+
+      let listItems = document.querySelectorAll("ul li");
+      for (let i = 0; i < listItems.length; i++) {
+          listItems[i].style.listStyleType = "square";
+      }
+    </script>
+  </body>
+</html>

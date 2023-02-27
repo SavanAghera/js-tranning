@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <div id="outer-div">
+      <div id="inner-div">
+        Click me
+      </div>
+    </div>
+
+
+    <script>
+        let outerDiv = document.querySelector("#outer-div");
+        
+        outerDiv.addEventListener("click", function(event) {
+          console.log("Outer div clicked!");
+        });
+        
+        let innerDiv = document.querySelector("#inner-div");
+        
+        innerDiv.addEventListener("click", function(event) {
+          console.log("Inner div clicked!");
+          event.stopPropagation();
+        });
+      </script>
+  </body>
+</html>
