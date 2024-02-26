@@ -1,32 +1,32 @@
 
-function showName(a) {
-    console.log(this.name , a);
-}
+// function showName(a) {
+//     console.log(this.name , a);
+// }
 
 
-class Display1 {
+// class Display1 {
 
-    name = "React";
-    displayName() {
-        const a = showName.bind(this); 
-        a('a')
-    }
-}
+//     name = "React";
+//     displayName() {
+//         const a = showName.bind(this); 
+//         a('a')
+//     }
+// }
 
 
-class Display2 {
+// class Display2 {
 
-    name = "Angular";
+//     name = "Angular";
 
-    displayName() {
-        showName.call(this)
-    }
-}
+//     displayName() {
+//         showName.call(this)
+//     }
+// }
 
-const obj1 = new Display1();
-const obj2 = new Display2();
-obj1.displayName();
-obj2.displayName();
+// const obj1 = new Display1();
+// const obj2 = new Display2();
+// obj1.displayName();
+// obj2.displayName();
 
 
 
@@ -46,10 +46,10 @@ obj2.displayName();
 //         this.name = name
 //     }
 //     sayHi (newArg1='hello' , newArg2='hi') {
-//         console.log(this.name , newArg1 , newArg2, this);
+//         console.log(this?.name , newArg1 , newArg2, this , '....');
 //     }
 
-//     sayHiArrow  = () => console.log(this , this.name )
+//     sayHiArrow  = () => console.log(this , this.name , '....A')
 
 // }
 
@@ -59,13 +59,13 @@ obj2.displayName();
 
 // const test1 = new Test('savan')
 
-// const test1Arrow = test1.sayHiArrow;
+// const sayHiArrow = test1.sayHiArrow;
 // const sayHi = test1.sayHi;
-// console.log(sayHi);
-// // test1Arrow();
-// sayHi.call(test1 , 'h1', 'h2');
-// sayHi.apply(test1 , ['h1', 'h2']);
-// hi()
+// sayHiArrow();
+// // sayHi()
+// // sayHi.call(test1 , 'h1', 'h2');
+// // sayHi.apply(test1 , ['h1', 'h2']);
+// // hi()
 
 // const callTest = sayHi.bind(test1);
 // callTest('h1', 'h2')
@@ -95,3 +95,22 @@ obj2.displayName();
 // const newCarPrice = new definePrice(100000); 
 
 // console.log(newBrand, newCarPrice);
+
+
+
+
+let a = {
+    name: 'savan',
+    b: {
+        a:1
+    }
+}
+let b = {
+    name: 'jay'
+}
+
+function test() {
+    console.log(this);
+}
+
+test.call(a)

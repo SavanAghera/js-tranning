@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="testInput" placeholder="123" onkeyup="change()"/>
+        <p id="ptag">
+           
+        </p>
+    <script>    
+ 
+        function change() {
+            let input = document.getElementById('testInput') 
+            console.log(input.value);
+            document.getElementById('ptag').innerHTML = input.value;
+        }
+    
+    </script>
+</body>
+</html>

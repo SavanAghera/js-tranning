@@ -25,8 +25,6 @@ console.log(first.__proto__ === Student.prototype)
 
 
 
-
-
 // function Student(name, age) {
 //     this.name = name;
 //     this.age = age;

@@ -5,12 +5,12 @@
     <p>This is the first paragraph.</p>
 
 
-    <!-- <div id="testDiv">kjhkj</div> -->
+    <div id="testDiv">kjhkj</div>
     <script>
-      // let div = document.getElementById('testDiv');
-      // div.innerHTML = '<p>This is the first paragraph inside div<p>'
-        let ele = 'p'
-      let newParagraph = document.createElement(ele);
+      let div = document.getElementById('testDiv');
+      // div.innerHTML = '<p>This is the first paragraph inside div</p>'
+  
+      let newParagraph = document.createElement('p');
       newParagraph.innerText = "This is a new paragraph.";
 
       document.body.append(newParagraph);
@@ -31,8 +31,8 @@
       newP.innerText = "This is a new paragraph after the new div.";
       newDiv.after(newP);
 
-      // let lastParagraph = document.querySelector("p:last-child");
-      // lastParagraph.remove();
+      let lastParagraph = document.querySelector("p:last-child");
+      lastParagraph.remove();
     </script>
   </body>
 </html>

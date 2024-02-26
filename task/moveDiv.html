@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #moveBox {
+            background-color: aqua;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+        }
+    </style>
+    <button onclick="stop()">clear</button>
+    <button onclick="start()">start</button>
+    <div id="moveBox"></div>
+    <script>
+        const div = document.getElementById('moveBox');
+        window.onmousemove = function(e) {
+            console.log(e.x, e.y);
+            div.style.top = e.y + 'px'
+            div.style.left = e.x + 'px'
+        }
+    //     let topPosition = 0 ;
+    //     let leftPosition = 0;
+    //     let interval =  setInterval(abc,10)
+    //     function abc() {
+    //         topPosition += 1;
+    //         div.style.top = topPosition + 'px';
+    //     }
+    //    function stop() {
+    //             clearInterval(interval)
+    //     }
+    //     function start() {
+    //         interval = setInterval(abc,10)
+    //     }
+    </script>
+</body>
+</html>

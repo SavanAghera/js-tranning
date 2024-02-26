@@ -1,12 +1,13 @@
-// let obj = { x: 1, y: 2, z: 3 };
-// console.log(Object.keys(obj)); 
-// console.log(Object.values(obj)); 
-// console.log(Object.entries(obj));
+let obj = { x: 1, y: 2, z: 3 };
+console.log(Object.keys(obj)); 
+console.log(Object.values(obj)); 
+console.log(Object.entries(obj));
 
 
 
 let obj1 = { x: 1, y: 2 };
 let obj2 = { y: 3, z: 4 };
+
 let obj3 = Object.assign(obj2, obj1);
 console.log(obj3, obj2); 
 

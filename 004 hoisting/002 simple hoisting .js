@@ -1,3 +1,3 @@
-
-
-// var log = () => console.log('this works');
+console.log(test);
+var test = 100;
+console.log(test);

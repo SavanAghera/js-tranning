@@ -1,5 +1,5 @@
 function init() {
-    var name = 'test'; 
+    let name = 'test'; 
     function displayName() {
         console.log(name); 
     }

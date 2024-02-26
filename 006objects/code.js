@@ -1,5 +1,9 @@
 let obj = {
     message: "Hello, world!",
+    a: [],
+    b: {
+      c:10
+    },
     sayHello: function() {
       console.log(this.message);
     }

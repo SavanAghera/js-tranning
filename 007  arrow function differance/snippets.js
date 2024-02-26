@@ -9,10 +9,9 @@
 // obj2.getThis = getThis;
 
 
-
+// console.log(getThis());
 // console.log(obj1.getThis()); 
-// console.log(obj2.getThis())
-
+// console.log(obj2.getThis());
 
 
 
@@ -82,6 +81,7 @@
 //     this.age = 25;
 //     var student = {
 //         name: "patel",
+//         age: 20,
 //         display: function () {
 //             console.log(this);
 //             console.log('Name: ', this.name);
@@ -90,7 +90,7 @@
 
 //         },
 //         displayWithArrow: () => {
-//             console.log(this);
+//             // console.log(this);
 //             console.log('Name: ', this.name);
 //             console.log('Age: ', this.age);
 //         }
@@ -119,9 +119,9 @@
 
 
 
-function testingArrowFunction() {
-    this.name = "Savan";
-    this.age = 25;
+let testingArrowFunction = () =>  {
+    // this.name = "Savan";
+    // this.age = 25;
     var student = {
         name: "patel",
         display: function () {
@@ -144,7 +144,7 @@ function testingArrowFunction() {
     student.displayWithArrow();
 }
 function wrapperFunction() {
-    let city = 'Ahmedabad';
+     this.city = 'Ahmedabad';
     testingArrowFunction();
 
 }
@@ -183,7 +183,6 @@ wrapperFunction();
 //             }
 //             test();
 //         },
-
 
 
 //         displayWithArrow: () => {

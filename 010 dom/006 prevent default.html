@@ -5,26 +5,27 @@
   </head>
   <body>
     <a href="https://www.example.com">Click me to go to example.com</a>
-    <!-- <form>
+    <form>
       <input type="text" placeholder="Enter some text">
       <input type="submit" value="Submit">
-    </form> -->
+    </form>
 
 
     <script>
         let link = document.querySelector("a");
         
         link.addEventListener("click", function(event) {
+          console.log(event);
           event.preventDefault();
           alert("Link was clicked but default action was prevented!");
         });
         
         // let form = document.querySelector("form");
         
-        // form.addEventListener("submit", function(event) {
-        //   event.preventDefault();
-        //   alert("Form was submitted but default action was prevented!");
-        // });
+        form.addEventListener("submit", function(event) {
+          event.preventDefault();
+          alert("Form was submitted but default action was prevented!");
+        });
       </script>
   </body>
 </html>

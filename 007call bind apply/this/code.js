@@ -16,9 +16,7 @@ class Test {
     }
 
 }
-
 const test1 = new Test('savan')
-
 test1.sayHi();
 test1.sayHello();
 
@@ -52,3 +50,19 @@ test1.sayHello();
 
 // const newFunction = obj.showContext;
 // newFunction();
+
+
+
+
+
+
+function tets(params) {
+
+  let b = 3
+  console.log(this);
+    // setTimeout( function() {
+    //     console.log(this.a, b);
+    // }, 2000);
+}
+
+tets();

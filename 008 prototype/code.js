@@ -4,8 +4,8 @@ let testArray = [1,2,3];
 // console.log(testArray.__proto__ === Array.prototype);
 
 
-console.log(testArray.__proto__.__proto__ === Object.prototype);
-console.log(testArray.__proto__.__proto__.__proto__);
+// console.log(testArray.__proto__.__proto__ === Object.prototype);
+// console.log(testArray.__proto__.__proto__.__proto__);
 
 
 
@@ -24,13 +24,13 @@ console.log(testArray.__proto__.__proto__.__proto__);
 
 
 
-const obj = {
-    test: 'test'
-}
+// const obj = {
+//     test: 'test'
+// }
 
-function testFun() {
+// function testFun() {
 
-}
+// }
 
 
 
@@ -50,10 +50,10 @@ class Test {
         console.log('new sayHi');
     }
  }
-
+console.log(Test.prototype , InheritedClass.prototype);
  const sayHello = new InheritedClass();
-sayHello.sayHi();
-sayHello.newSayHi()
- console.log(sayHello.__proto__);
+// sayHello.sayHi();
+// sayHello.newSayHi()
+ console.log(sayHello.__proto__, InheritedClass.prototype);
  console.log(Test.prototype);
  console.log(sayHello.__proto__.__proto__ === Test.prototype);

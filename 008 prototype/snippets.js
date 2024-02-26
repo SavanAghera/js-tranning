@@ -40,71 +40,71 @@ second.speak();
 
 
 
-/////////////////////////////////////////////
+// /////////////////////////////////////////////
 
 
-class Cat {
-    constructor(name) {
-      this.name = name;
-    }
+// class Cat {
+//     constructor(name) {
+//       this.name = name;
+//     }
 
-    speak() {
-      console.log(`${this.name} makes a noise.`);
-    }
-  }
-
-  class Lion extends Cat {
-    speak() {
-      super.speak();
-      console.log(`${this.name} also roars.`);
-    }
-  }
-
-  const bella = new Cat('bella');
-  bella.speak();
-  const simba = new Lion("simba");
-  simba.speak();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function Cat(name) {
-//   this.name = name
-// }
-
-// Cat.prototype.speak = function () {
-//   console.log(`${this.name} makes a noise.`);
-
-// }
-
-// function Lion(name) {
-//   Cat.call(this, name);
-//   this.speak = function () {
-//     Cat.prototype.speak.bind(this)();
-//     console.log(`${this.name} also roars.`);
+//     speak() {
+//       console.log(`${this.name} makes a noise.`);
+//     }
 //   }
 
-// }
-// const bella = new Cat('bella');
-// bella.speak();
-// const simba = new Lion("simba");
-// simba.speak();
+//   class Lion extends Cat {
+//     speak() {
+//       super.speak();
+//       console.log(`${this.name} also roars.`);
+//     }
+//   }
+
+//   const bella = new Cat('bella');
+//   bella.speak();
+//   const simba = new Lion("simba");
+//   simba.speak();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Cat(name) {
+  this.name = name
+}
+
+Cat.prototype.speak = function () {
+  console.log(`${this.name} makes a noise.`);
+
+}
+
+function Lion(name) {
+  Cat.call(this, name);
+  this.speak = function () {
+    Cat.prototype.speak.bind(this)();
+    console.log(`${this.name} also roars.`);
+  }
+
+}
+const bella = new Cat('bella');
+bella.speak();
+const simba = new Lion("simba");
+simba.speak();

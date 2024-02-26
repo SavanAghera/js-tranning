@@ -1,13 +1,13 @@
-// let obj = {
-//     x: 5,
-//     y: 10,
-//     showContext: ()=> {
-//         console.log(this, this.x, this.y);
-//     }
-// };
+let obj = {
+    x: 5,
+    y: 10,
+    showContext: ()=> {
+        console.log(this, this.x, this.y);
+    }
+};
 
 
-// obj.showContext() 
+obj.showContext() 
 
 
 // const newFunction = obj.showContext;
@@ -18,16 +18,16 @@
 
 
 
-let obj = {
-    x: 5,
-    y: 10,
-    showContext: function() {
-        console.log(this, this.x, this.y);
-    }
-};
+// let obj = {
+//     x: 5,
+//     y: 10,
+//     showContext: function() {
+//         console.log(this, this.x, this.y);
+//     }
+// };
 
 
-obj.showContext() 
+// obj.showContext() 
 
 
 // const newFunction = obj.showContext;

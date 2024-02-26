@@ -20,7 +20,9 @@ function third() { fourth() }
 
 function second() { third() }
 
-function first() { second() }
+function first() { second() 
+console.log('hi');
+}
 
 first();
 

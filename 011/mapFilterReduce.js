@@ -56,6 +56,35 @@ let arr4 = [1,2,3,4,5,6,7,8,9,10,11]
 const result3  = arr4.reduce((accumulator, currentValue ,index, array) => {
     console.log(accumulator,currentValue,index);
     return accumulator+currentValue;
-},5);
+},0);
 
 console.log(result3);
+
+
+
+
+
+// class PowerArray extends Array {
+//     isEmpty() {
+//     console.log(this);
+//       return this.length === 0;
+//     }
+  
+//     static get [Symbol.species]() {
+//       return Array;
+//     }
+//   }
+  
+//   let arr5 = new PowerArray(1, 2, 5, 10, 50);
+//   console.log(arr5.isEmpty()); // false
+  
+//   let filteredArr = arr5.filter(item => item >= 10);
+  
+//   console.log(filteredArr.isEmpty());
+
+
+
+
+
+  
+

@@ -1,0 +1,47 @@
+<body>
+
+  <div id="divTag">
+    <div id="child">
+      <a id="aTag" href="https://google.com" target="_blank">google</a>
+
+    </div>
+
+  </div>
+
+  <script>
+    document.body.addEventListener(
+      "click",
+      (e) => {
+        alert("body");
+      },
+      true
+    );
+
+    document.getElementById("divTag").addEventListener(
+      "click",
+      (e) => {
+        alert("div");
+        e.stopPropagation();
+      },
+      true
+    );
+
+    document.getElementById("child").addEventListener(
+      "click",
+      (e) => {
+        alert("child");
+      },
+      true
+    );
+      
+    document.getElementById("aTag").addEventListener(
+      "click",
+      (e) => {
+        console.log(e);
+        e.preventDefault();
+        alert("a");
+      },
+      false
+    );
+  </script>
+</body>
