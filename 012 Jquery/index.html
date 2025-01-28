@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <button id="new">click me</button>
+
+    <p class="highlight">This is a highlighted paragraph.</p>
+    <p class="highlight">This is another highlighted paragraph.</p>
+    <p id="myId" class="special">This is a special paragraph with unique ID</p>
+
+    <div id="divTest" class="special">
+      this is inside div
+      <p class="special">This is a special paragraph with unique ID</p>
+    </div>
+    <ul>
+      <li>List item 1</li>
+      <li>List item 2</li>
+    </ul>
+
+    <div>2</div>
+    <div class="middle">2</div>
+    <div class="middle">3</div>
+    <div class="middle">4</div>
+    <div class="middle">5</div>
+    <div>6</div>
+
+
+    <ul id="res">
+
+    </ul>
+    <script>
+    //   console.log($('#new'));
+    //   console.log(jQuery('#new'));
+
+    //   $('#new').on('click', (e) => {
+    //       console.log('clicked ', e);
+    //   });
+
+      ////////////////////////////
+
+        // const handler = (e) => {
+        //   console.log("clicked with handler");
+        // };
+
+        // $("#myId").on("click", handler);
+        // $('#new').on('click',  () => $("#myId").off('click'));
+
+      //////////////////////////////
+
+        // const handler = (e) => {
+        //   console.log("clicked with handler");
+        // };
+        // const handler2 = (e) => {
+        //   console.log("clicked with handler2");
+        // };
+
+        // let obj = {
+        //   a: 5,
+        //   handler3 () {
+        //       console.log("clicked with handler2" , this.a);
+        //   }
+        // }
+        // let h3 = obj.handler3.bind(obj)
+        // $("#myId").on("click", handler);
+        // $("#myId").on("click ", handler2);
+        // $("#myId").on("click ", h3 );
+        // $('#new').on('click',  () => $("#myId").off('click' ,  h3));
+
+      ///////////////////////
+
+    //   $('#new').attr('hi' , '123');
+    //   console.log($('#new').attr('hi'));
+
+    //   $('#new').addClass('hi1')
+    //   $('#new').addClass('hi3')
+    //   $('#new').removeClass('hi3')
+
+    //   $('#new').css('background-color', 'red');
+
+    //   $('#new').css({
+    //       'background-color': 'blue',
+    //       'color': 'white'
+    //   })
+
+      ///////////////////////////////////////////
+
+      //   $("div")
+      //     .css("background", "#c8ebcc")
+      //     .filter(".middle") // you can also put function here
+      //     .css("background", "red");
+      ////////////////////////////////////////////////////
+
+
+        // $("div")
+        //   .css("background", "#c8ebcc")
+        //   .filter(function (index)  {
+        //       console.log(index , this);
+        //       return parseInt(this.innerText) %2 == 0
+        //   })
+        //   .css("background", "red");
+
+        ///////////////////////////////////////////
+
+
+        // $('#new').text('helloooo')
+        // $('#new').after('<h1> hii </h1>') // you can check dom manipulation 
+
+
+
+        // ////////////////////////////
+        $("button").text('call api').click(function () {
+                $.ajax({
+                    url: "https://dummyjson.com/todos",
+                    success: function (result) {
+                        console.log(result);
+
+                        result.todos.forEach(todo => {
+                            $("#res").append(`<li> ${todo.todo} </li>`)
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                    }
+                });
+            });
+
+
+
+
+        ///////////////////
+        // https://jqueryui.com/autocomplete/#xml
+    </script>
+  </body>
+</html>

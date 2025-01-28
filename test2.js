@@ -99,9 +99,24 @@
 // console.log(Object.keys(obj));
 
 
-function test(a) { 
-     a =  [10]
+// function test(a) { 
+//      a =  [10]
+// }
+// const a = [1,2,3];
+// test(a);
+// console.log(a);
+
+const a = [{a:1},,{a:2}];
+
+function swap(ind1, ind2){
+     let temp = 0;
+     temp = a[ind1].a
+     if(ind2> a.length || ind2<0 ){
+
+          a[ind1].a = a[ind2].a
+          a[ind2].a = temp;
+     }
 }
-const a = [1,2,3];
-test(a);
+
+swap(1,2)
 console.log(a);

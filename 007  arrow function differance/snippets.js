@@ -119,37 +119,37 @@
 
 
 
-let testingArrowFunction = () =>  {
-    // this.name = "Savan";
-    // this.age = 25;
-    var student = {
-        name: "patel",
-        display: function () {
-            console.log('Name: ', this.name);
-            console.log('Age: ', this.age);
-            console.log('city: ', this.city);
-        },
+// let testingArrowFunction = () =>  {
+//     // this.name = "Savan";
+//     // this.age = 25;
+//     var student = {
+//         name: "patel",
+//         display: function () {
+//             console.log('Name: ', this.name);
+//             console.log('Age: ', this.age);
+//             console.log('city: ', this.city);
+//         },
 
-        displayWithArrow: () => {
+//         displayWithArrow: () => {
 
-            console.log('Name: ', this.name);
-            console.log('Age: ', this.age);
-            console.log('city: ', this.city);
+//             console.log('Name: ', this.name);
+//             console.log('Age: ', this.age);
+//             console.log('city: ', this.city);
 
-        }
+//         }
 
-    };
-    student.display();
-    console.log('\n-------With Arrow Function1-------\n');
-    student.displayWithArrow();
-}
-function wrapperFunction() {
-     this.city = 'Ahmedabad';
-    testingArrowFunction();
+//     };
+//     student.display();
+//     console.log('\n-------With Arrow Function1-------\n');
+//     student.displayWithArrow();
+// }
+// function wrapperFunction() {
+//      this.city = 'Ahmedabad';
+//     testingArrowFunction();
 
-}
+// }
 
-wrapperFunction();
+// wrapperFunction();
 
 
 

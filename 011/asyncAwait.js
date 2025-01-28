@@ -1,27 +1,34 @@
-
-// function delayedHello1() {
-//     return new Promise(function (resolve, reject) {
-//         setTimeout(() => {
-//             // resolve("Hello! 1");
-//             reject('error')
-//         }, 2000);
-//     });
-// }
-// function delayedHello2() {
-//     return new Promise(function (resolve, reject) {
-//         setTimeout(() => {
-//             resolve("Hello! 2");
-//             // reject('error')
-//         }, 2000);
-//     });
-// }
-// function delayedError() {
-//     return new Promise(function (resolve, reject) {
-//         setTimeout(() => {
-//             reject('error')
-//         }, 2000);
-//     });
-// }
+function delayedHello() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            resolve("Hello!");
+            // reject('error')
+        }, 2000);
+    });
+}
+function delayedHello1() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            resolve("Hello! 1");
+            // reject('error')
+        }, 2000);
+    });
+}
+function delayedHello2() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            resolve("Hello! 2");
+            // reject('error')
+        }, 2000);
+    });
+}
+function delayedError() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            reject('error')
+        }, 2000);
+    });
+}
 
 
 // let pro = new Promise((res, rej) => {res('resolve')});
@@ -59,23 +66,24 @@
 // })
 
 
-// return promise
-// async function  test() {
-//     try{
-//     let a = await delayedHello();
-//     console.log(a);
-//     let b = await delayedHello1();
-//     console.log(b);
-//     let c = await delayedHello2();
-//     console.log(c);
-//     }catch (e) {
-//         console.log(e);
-//     }
-//     console.log('finished');
-// }
+async function test() {
+    try {
+        console.log('testtttttt');
+        let a = await delayedHello();
+        console.log(a);
+        let b = await delayedHello1();
+        console.log(b);
+        // let c = await delayedHello2();
+        // console.log(c);
+    } catch (e) {
+        console.log(e);
+    }
+    console.log('finished');
+}
 
 
-// test();
+test();
+console.log('resr');
 
 
 
@@ -215,7 +223,7 @@
 //     } catch (error) {
 //         console.log(error);
 //     }
- 
+
 
 
 // }
@@ -249,12 +257,12 @@
 
 
 
-    // try {
-    //     let response = await delayedHello();
-    //     console.log(response);
-    // } catch (error) {
-    //     console.log(error);
-    // }
+// try {
+//     let response = await delayedHello();
+//     console.log(response);
+// } catch (error) {
+//     console.log(error);
+// }
 
 
 
@@ -272,23 +280,23 @@
 //     });
 
 
-//     async function handleAsyncProcess() {
-//         try {
-//             console.log('hello') 
-//             let response = await promise5();
-//             console.log(response);
-            
-//             let response2 = await promise10();
-//             console.log(response2);
-//         } catch (error) {
-//             console.log(error);
-//         }
-//     }
-//     handleAsyncProcess();
-// console.log('hi');
+async function handleAsyncProcess() {
+    try {
+        console.log('hello')
+        let response = await promise5();
+        console.log(response);
+
+        let response2 = await promise10();
+        console.log(response2);
+    } catch (error) {
+        console.log(error);
+    }
+}
+handleAsyncProcess();
+console.log('hi');
 
 
-    // async function handleAsyncProcess() {
-    //     return 2 
-    // }
-    // console.log(handleAsyncProcess());
+// async function handleAsyncProcess() {
+//     return 2
+// }
+// console.log(handleAsyncProcess());

@@ -89,16 +89,35 @@ first();
 
 
 
-function delayedHello() {
-    return new Promise(function (resolve, reject) {
-        setTimeout(() => {
-            resolve("Hello!");
-            // reject('error')
-        }, 2000);
-    });
-}
+// function delayedHello() {
+//     return new Promise(function (resolve, reject) {
+//         setTimeout(() => {
+//             resolve("Hello!");
+//             // reject('error')
+//         }, 2000);
+//     });
+// }
 
-delayedHello().then(function ab()  {
+// delayedHello().then(function ab()  {
 
-});
-setTimeout(function a(){},0)
+// });
+// setTimeout(function a(){},0)
+
+
+
+
+
+
+// $.on('button', 'click', function onClick() {
+//     setTimeout(function timer() {
+//         console.log('You clicked the button!');    
+//     }, 2000);
+// });
+
+// console.log("Hi!");
+
+// setTimeout(function timeout() {
+//     console.log("Click the button!");
+// }, 5000);
+
+// console.log("Welcome to loupe.");

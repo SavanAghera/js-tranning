@@ -22,13 +22,16 @@
         })
         btn2.addEventListener('custom' , (value) => {
             console.log(value , 'custom event');
-        });
+        } );    
+        // btn2.addEventListener('custom' , (value) => {
+        //     console.log(value , 'custom event2');
+        // });
         btn2.addEventListener('dataEvent' , (value) => {
             console.log(value , 'custom event with data');
         });
 
         function hello(eventData){
-            console.log(eventData);
+            console.log(eventData, 'helo called');
         }
         function fireCustomEvent() {
             btn2.dispatchEvent(cusEvent)

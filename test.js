@@ -220,14 +220,41 @@
 
 // console.log(a(obj.print)); // 10
 
+// const a = [
+//     {
+//         num: {
+//             B: 11
+//         }
+//     },
+//     {
+//         num: {
+//             B: 10
+//         }
+//     },
+//     {
+//         num: {
+//             B: 13
+//         }
+//     }
+// ];
+// let b = a[1]
+// console.log(a.indexOf(b));
+// let b = 'helooooo'
 
+// function  aa( str) {
+//     let index = str.indexOf('l');
+//     let  next = str[index+1];
+//     return  ( index , next)
+// }
+// l
+// console.log(aa(b));
+// let a = 5;
 
+const b = c = a = 12
+console.log(a,b, c);
+// console.log(a,b,c);
+// let x = 0;
+// let y = 0;
+// x = a++ + ++a + a++ + a;
+// console.log(x);
 
-
-// arr = [{num: 10}, {num: 20}, {num: 30}]
-// console.log(arr.indexOf(1));
-
-
-
-
-a = [1,2,3,4,5,6,7,8,9];

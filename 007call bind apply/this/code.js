@@ -10,7 +10,7 @@ class Test {
     }
     sayHello () {
         setTimeout( () =>   {
-            console.log(this.name , this);
+            console.log(this.name , this , 'Arrow');
         },1000)
     
     }
@@ -56,13 +56,13 @@ test1.sayHello();
 
 
 
-function tets(params) {
+// function tets(params) {
 
-  let b = 3
-  console.log(this);
-    // setTimeout( function() {
-    //     console.log(this.a, b);
-    // }, 2000);
-}
+//   let b = 3
+//   console.log(this);
+//     // setTimeout( function() {
+//     //     console.log(this.a, b);
+//     // }, 2000);
+// }
 
-tets();
+// tets();
